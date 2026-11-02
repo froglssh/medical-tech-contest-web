@@ -1198,6 +1198,15 @@ main {
   transform: translateY(-1px);
 }
 
+.btn-claude {
+  background: linear-gradient(135deg, #d97706, #c2410c);
+}
+
+.btn-claude:hover {
+  background: linear-gradient(135deg, #b45309, #9a3412);
+  transform: translateY(-1px);
+}
+
 .btn-copy-prompt {
   background: #ffffff;
   border: 1.5px solid #cbd5e1;

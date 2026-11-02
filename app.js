@@ -474,6 +474,10 @@ function launchAiAssistant(provider, stage, stepIdx) {
     copyToClipboard(prompt, '提示詞已自動複製！即將開啟 Google Gemini，請在對話框按 Ctrl+V (⌘V) 貼上即可開始！');
     const url = 'https://gemini.google.com/app';
     setTimeout(() => window.open(url, '_blank'), 400);
+  } else if (provider === 'claude') {
+    copyToClipboard(prompt, '提示詞已自動複製！即將開啟 Claude，請在對話框按 Ctrl+V (⌘V) 貼上即可開始！');
+    const url = 'https://claude.ai/new';
+    setTimeout(() => window.open(url, '_blank'), 400);
   } else if (provider === 'copy') {
     copyToClipboard(prompt, '提示詞已成功複製至剪貼簿！可貼到 Claude、NotebookLM 等任何 AI 工具。');
   }
@@ -643,6 +647,9 @@ function renderForm() {
               <button type="button" class="btn-ai-external btn-chatgpt" id="btn-call-chatgpt">
                 <span>⚡ 一鍵複製並開啟 ChatGPT</span>
               </button>
+              <button type="button" class="btn-ai-external btn-claude" id="btn-call-claude">
+                <span>⚡ 一鍵複製並開啟 Claude</span>
+              </button>
               <button type="button" class="btn-copy-prompt" id="btn-copy-only">
                 <span>📋 僅複製提示詞</span>
               </button>
@@ -739,6 +746,11 @@ function bindStepEvents() {
   const btnChatgpt = $('#btn-call-chatgpt');
   if (btnChatgpt) {
     btnChatgpt.onclick = () => launchAiAssistant('chatgpt', currentAiStage, activeStep);
+  }
+
+  const btnClaude = $('#btn-call-claude');
+  if (btnClaude) {
+    btnClaude.onclick = () => launchAiAssistant('claude', currentAiStage, activeStep);
   }
 
   const btnCopyOnly = $('#btn-copy-only');
