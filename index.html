@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="高中醫療科技創意競賽選題與設定工具：瀏覽可核對案例、理解特色、建立可驗證的新題目。" />
+  <title>醫療科技競賽選題與設定工具</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark">＋</span><div><span class="eyebrow">高中生專題導航</span><h1>醫療科技競賽選題與設定工具</h1></div></div>
+    <nav class="top-nav" aria-label="主要導覽"><button class="nav-btn active" data-tab="cases">歷屆作品</button><button class="nav-btn" data-tab="wizard">新題目工作坊</button><button class="nav-btn" data-tab="rules">115／2026參賽規則</button></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="kicker">從公開案例讀懂問題，再把想法變成可驗證原型</p><h2>把「很酷的科技」<br><em>變成值得驗證的需求。</em></h2><p>以第2–5屆可核對作品為學習素材，將「使用者、場域、證據、原理、原型、指標、風險」串成一條高中生走得完的路。</p><div class="hero-actions"><button class="primary" data-jump="wizard">開始設定新題目 <span>→</span></button><button class="text-btn" data-jump="cases">先看歷屆作品 ↓</button></div></div>
+      <div class="hero-orbit" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit-core">3<br><small>主題</small></div><span class="orbit-label l1">智慧</span><span class="orbit-label l2">精準</span><span class="orbit-label l3">全齡</span></div>
+    </section>
+
+    <div class="notice"><span class="notice-icon">i</span><div><strong>先說清楚資料邊界</strong><p>本站資料庫非完整競賽資料庫，目前收錄第2屆19組、第3屆19組、第4屆16組、第5屆22組官方公告之決賽作品，共76組；範圍限主辦單位公開的決賽名單，不含未進入決賽的參賽作品，也不等於各屆完整報名清冊（例如第5屆共有269隊參賽）。卡片中的「創意亮點／可借鏡／風險」為依公開題名、官方公告或公開訪談之教學性推論，<strong>非主辦或評審意見</strong>；官方未公開企劃全文之作品不推定具體機制。</p></div></div>
+
+    <section id="cases" class="tab-panel active">
+      <div class="section-heading"><div><p class="kicker">CASE LIBRARY / 01</p><h2>歷屆作品，拆解成可學習的選題線索</h2><p class="section-lead">第三屆「精準醫療」金獎是否從缺未在本工具推定；請以官方完整名單另行核對。</p></div><span id="result-count" class="count-pill" aria-live="polite" aria-atomic="true"></span></div>
+      <div class="filter-bar"><label class="search-wrap"><span>⌕</span><input id="search" type="search" aria-label="搜尋案例" placeholder="搜尋題目或關鍵字，例如：AI、尿袋、步態" /></label><select id="edition" aria-label="篩選屆次"><option value="all">所有屆次</option><option value="2">第二屆</option><option value="3">第三屆</option><option value="4">第四屆</option><option value="5">第五屆</option></select><select id="award" aria-label="篩選獎項"><option value="all">所有獎項</option><option>金獎</option><option>銀獎</option><option>銅獎</option><option>決賽入圍</option></select></div>
+      <div id="theme-filters" class="chips" role="group" aria-label="主題篩選"><button class="chip active" data-theme="all">全部主題</button><button class="chip" data-theme="智慧醫療">智慧醫療</button><button class="chip" data-theme="精準醫療">精準醫療</button><button class="chip" data-theme="全齡健康">全齡健康</button></div>
+      <div id="case-grid" class="case-grid"></div>
+    </section>
+
+    <section id="wizard" class="tab-panel">
+      <div class="section-heading"><div><p class="kicker">IDEA WORKSHOP / 02</p><h2>新題目設定精靈</h2><p class="section-lead">先選主題，再沿著問題證據一路收斂。這裡不替你宣稱診斷、治療或取代醫療人員。</p></div><div class="step-count"><span id="step-number">1</span> / 9</div></div>
+      <div class="wizard-layout"><aside class="stepper" id="stepper"></aside><div class="wizard-main"><form id="idea-form"></form><div class="wizard-actions"><button class="secondary" id="prev-step" type="button">← 上一步</button><button class="primary" id="next-step" type="button">下一步 →</button></div><div id="summary" class="summary hidden"></div></div></div>
+    </section>
+
+    <section id="rules" class="tab-panel">
+      <div class="section-heading"><div><p class="kicker">OFFICIAL BRIEF / 03</p><h2>115／2026參賽規則</h2><p class="section-lead">依第六屆官方活動簡章整理，查核日期：2026-11-01。送件前請回查主辦方最新公告。</p></div><a class="source-link" target="_blank" rel="noreferrer" href="https://innoaward.taiwan-healthcare.org/photo_detail.php?REFDOCID=0rhisem0dgzqb2mg&REFDOCTYPID=0rhgrh6y6rr0lkfw">開啟官方簡章 ↗</a></div>
+      <div class="conflict-grid"><article class="conflict"><span>⚠ 時程矛盾 01</span><h3>資料繳交截止</h3><p><strong>正文／規格章節：</strong>2026/12/24</p><p><strong>日程表一處：</strong>2026/12/25</p><small>官方簡章不一致；請以主辦方最新公告確認。</small></article><article class="conflict"><span>⚠ 時數文字差異 02</span><h3>展場探索與實作</h3><p><strong>活動流程：</strong>展期全展區至少3小時</p><p><strong>學習證明段落：</strong>單日累計至少3小時</p><small>採保守規劃：每位學生單日 ≥ 3 小時，並完成簽到／退。</small></article></div>
+      <div class="rule-grid"><article class="rule-card accent"><h3>參賽基本盤</h3><ul><li>全國公私立高中職在學學生</li><li>每隊 3–5 名學生、1–2 名指導教師</li><li>可跨校組隊；代表人僅限一隊</li><li>題目須以台灣醫療科技展展出項目為發想依據</li><li>三主題：智慧醫療、精準醫療、全齡健康</li></ul></article><article class="rule-card"><h3>交件格式與扣分</h3><ul><li>企劃說明書：16:9 橫式 PDF，最多15頁含封面，≤5MB；不符扣3分</li><li>影片：≤3分鐘，mp4／avi／wmv／mov，≤100MB，解析度 ≥1280×720；不符扣3分</li><li>官方文字另有檔名規範，請依簡章命名</li></ul></article><article class="rule-card"><h3>展場與審查</h3><ul><li>展期：2026/12/03–12/06，南港展覽館1館1F、4F全展區</li><li>展場缺席或未完成規定，資格可能不完整；請依主辦方簽到／退紀錄</li><li>第一階段前40%，第二階段前10%</li><li>五個評分向度各20%；決審另含5分鐘簡報與5分鐘詢答表現</li><li>金／銀／銅門檻：90／85／80分，未達可從缺</li></ul></article><article class="rule-card caution"><h3>原創、授權與責任</h3><ul><li>不得為已公開發表作品、市面現成商業產品或其他商業創作</li><li>著作權／專利權等侵權責任由參賽者負擔</li><li>主辦方有非營利展示、重製、公開播送／傳輸／上映／展示授權條款；特殊機密應依報名表註明</li><li>工具不收集或上傳學生姓名、電話、Email 等個資</li></ul></article></div>
+      <div class="minor-note">簡章注意事項：共同主辦列出13所醫學系；PDF抽取文字某處出現14所，與本選題工具無關，請回查原文，不將其視為確定值。</div>
+    </section>
+  </main>
+  <footer><span>醫療科技競賽選題與設定工具</span><span>本地靜態資料｜不需登入｜不收集個資</span></footer>
+  <script src="data/cases.js"></script><script src="app.js"></script>
+</body>
+</html>
